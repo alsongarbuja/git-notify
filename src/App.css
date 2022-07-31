@@ -1,38 +1,121 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+::-webkit-scrollbar {
+  width: 0.5rem;
+  background-color: rgba(221, 160, 221, 0.5);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.wrapper {
+  background-color: rgb(21, 21, 21);
+  color: #e2e2e2;
+  width: 100%;
+  overflow: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.login-screen {
   display: flex;
+  height: 100vh;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  gap: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.login-btn {
+  background-color: #e2e2e2;
+  color: rgb(21, 21, 21);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav {
+  padding: 2em 1em;
+  background-color: black;
+  box-shadow: 2px 3px 5px #101010;
+}
+
+.notification-section {
+  margin-block: 1em;
+  padding-inline: 1em;
+}
+
+.notification-section>h2 {
+  text-decoration: underline;
+}
+
+.see-btn {
+  padding: 0.5rem 1rem;
+  background-color: rgba(221, 160, 221, 0.182);
+  color: plum;
+  border: 1px solid plum;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  align-self: center;
+  width: 30%;
+  margin-block-start: 1em;
+}
+
+.issue-card--display {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #e2e2e2;
+  margin: 1em 0.5em;
+  cursor: pointer;
+}
+
+.issue-card--display:hover, .comment-card--display:hover {
+  border-color: blueviolet;
+}
+
+.issue-card--content {
+  flex: 2;
+  border-inline-end: 1px solid #e2e2e2;
+}
+
+.issue-card--title {
+  font-weight: 400;
+}
+
+.issue-id {
+  font-size: 1.2rem;
+  font-weight: 900;
+  margin-inline-end: .5em;
+}
+
+.comment-card--display {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #e2e2e2;
+  margin: 1em 0.5em;
+  cursor: pointer;
+}
+
+.comment-card--display h3 {
+  text-decoration: underline;
+}
+
+/* utility classes */
+.flex {
+  display: flex;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.items-center {
+  align-items: center;
 }
